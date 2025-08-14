@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tudo em Casa - Loja de Variedades</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Tudo em <span>Casa</span></h1>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+                <div class="mobile-menu-icon">
+                    <button onclick="menuShow()"><i class="fas fa-bars"></i></button>
+                </div>
+            </nav>
+            <div class="cart-icon">
+                <a href="#"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a>
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <ul>
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero">
+        <div class="container">
+            <h2>Tudo o que você precisa em um só lugar!</h2>
+            <p>Produtos de qualidade para sua casa, escritório e presentes com os melhores preços.</p>
+            <a href="produtos.html" class="btn">Ver Produtos</a>
+        </div>
+    </section>
+
+    <!-- Destaques -->
+    <section class="destaques">
+        <div class="container">
+            <h2>Nossos Destaques</h2>
+            <div class="destaques-grid">
+                <div class="destaque-item">
+                    <i class="fas fa-truck"></i>
+                    <h3>Entrega Rápida</h3>
+                    <p>Entregamos em até 48h na região metropolitana.</p>
+                </div>
+                <div class="destaque-item">
+                    <i class="fas fa-undo"></i>
+                    <h3>Trocas Fáceis</h3>
+                    <p>Garantia de 7 dias para trocas sem burocracia.</p>
+                </div>
+                <div class="destaque-item">
+                    <i class="fas fa-percent"></i>
+                    <h3>Ofertas Exclusivas</h3>
+                    <p>Descontos especiais para clientes cadastrados.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produtos em Destaque (Carrossel) -->
+    <section class="produtos-destaque">
+        <div class="container">
+            <h2>Produtos em Destaque</h2>
+            <div class="carrossel">
+                <button class="carrossel-btn prev" onclick="moveCarrossel(-1)">&#10094;</button>
+                <div class="carrossel-container">
+                    <div class="carrossel-slide">
+                        <div class="produto-item">
+                            <img src="images/produto1.jpg" alt="Jogo de Panelas">
+                            <h3>Jogo de Panelas</h3>
+                            <p class="preco">R$ 199,90</p>
+                            <button class="btn-carrinho" onclick="addToCart()">Adicionar ao Carrinho</button>
+                        </div>
+                        <div class="produto-item">
+                            <img src="images/produto2.jpg" alt="Conjunto de Toalhas">
+                            <h3>Conjunto de Toalhas</h3>
+                            <p class="preco">R$ 89,90</p>
+                            <button class="btn-carrinho" onclick="addToCart()">Adicionar ao Carrinho</button>
+                        </div>
+                        <div class="produto-item">
+                            <img src="images/produto3.jpg" alt="Luminária Decorativa">
+                            <h3>Luminária Decorativa</h3>
+                            <p class="preco">R$ 129,90</p>
+                            <button class="btn-carrinho" onclick="addToCart()">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                    <div class="carrossel-slide">
+                        <div class="produto-item">
+                            <img src="images/produto4.jpg" alt="Jogo de Copos">
+                            <h3>Jogo de Copos</h3>
+                            <p class="preco">R$ 59,90</p>
+                            <button class="btn-carrinho" onclick="addToCart()">Adicionar ao Carrinho</button>
+                        </div>
+                        <div class="produto-item">
+                            <img src="images/produto5.jpg" alt="Cesta de Café da Manhã">
+                            <h3>Cesta de Café</h3>
+                            <p class="preco">R$ 79,90</p>
+                            <button class="btn-carrinho" onclick="addToCart()">Adicionar ao Carrinho</button>
+                        </div>
+                        <div class="produto-item">
+                            <img src="images/produto6.jpg" alt="Conjunto de Travesseiros">
+                            <h3>Conjunto de Travesseiros</h3>
+                            <p class="preco">R$ 149,90</p>
+                            <button class="btn-carrinho" onclick="addToCart()">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="carrossel-btn next" onclick="moveCarrossel(1)">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Receba nossas ofertas</h2>
+            <p>Cadastre-se e receba promoções exclusivas por e-mail</p>
+            <form id="newsletter-form">
+                <input type="email" placeholder="Seu melhor e-mail" required>
+                <button type="submit" class="btn">Cadastrar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-col">
+                <h3>Tudo em Casa</h3>
+                <p>Sua loja de variedades com os melhores produtos para casa, presentes e utilidades domésticas.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Horário de Funcionamento</h3>
+                <p>Segunda a Sexta: 9h às 18h</p>
+                <p>Sábado: 9h às 13h</p>
+                <p>Domingo: Fechado</p>
+            </div>
+            <div class="footer-col">
+                <h3>Contato</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Rua Comercial, 123 - Centro</p>
+                <p><i class="fas fa-phone"></i> (41) 9999-9999</p>
+                <p><i class="fas fa-envelope"></i> contato@tudoemcasa.com</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Tudo em Casa. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
