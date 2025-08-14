@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria - Tudo em Casa</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Tudo em <span>Casa</span></h1>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li class="active"><a href="galeria.html">Galeria</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+                <div class="mobile-menu-icon">
+                    <button onclick="menuShow()"><i class="fas fa-bars"></i></button>
+                </div>
+            </nav>
+            <div class="cart-icon">
+                <a href="#"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a>
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li class="active"><a href="galeria.html">Galeria</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Nossa Galeria</h1>
+            <p>Conheça nossos produtos e ambiente</p>
+        </div>
+    </section>
+
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="todos">Todos</button>
+                <button class="filter-btn" data-filter="cozinha">Cozinha</button>
+                <button class="filter-btn" data-filter="banheiro">Banheiro</button>
+                <button class="filter-btn" data-filter="decoracao">Decoração</button>
+                <button class="filter-btn" data-filter="loja">Nossa Loja</button>
+            </div>
+            
+            <div class="gallery-grid">
+                <!-- Imagem 1 -->
+                <div class="gallery-item" data-category="cozinha">
+                    <img src="images/galeria1.jpg" alt="Utensílios de Cozinha">
+                    <div class="gallery-overlay">
+                        <h3>Utensílios de Cozinha</h3>
+                        <p>Variedade de produtos para sua cozinha</p>
+                    </div>
+                </div>
+                
+                <!-- Imagem 2 -->
+                <div class="gallery-item" data-category="banheiro">
+                    <img src="images/galeria2.jpg" alt="Conjunto Banheiro">
+                    <div class="gallery-overlay">
+                        <h3>Conjunto Banheiro</h3>
+                        <p>Toalhas e acessórios combinando</p>
+                    </div>
+                </div>
+                
+                <!-- Imagem 3 -->
+                <div class="gallery-item" data-category="decoracao">
+                    <img src="images/galeria3.jpg" alt="Decoração de Sala">
+                    <div class="gallery-overlay">
+                        <h3>Decoração de Sala</h3>
+                        <p>Itens para deixar sua sala aconchegante</p>
+                    </div>
+                </div>
+                
+                <!-- Imagem 4 -->
+                <div class="gallery-item" data-category="loja">
+                    <img src="images/galeria4.jpg" alt="Área de Vendas">
+                    <div class="gallery-overlay">
+                        <h3>Área de Vendas</h3>
+                        <p>Nosso espaço organizado para melhor atendê-lo</p>
+                    </div>
+                </div>
+                
+                <!-- Imagem 5 -->
+                <div class="gallery-item" data-category="cozinha">
+                    <img src="images/galeria5.jpg" alt="Jogo de Jantar">
+                    <div class="gallery-overlay">
+                        <h3>Jogo de Jantar</h3>
+                        <p>Conjuntos completos para suas refeições</p>
+                    </div>
+                </div>
+                
+                <!-- Imagem 6 -->
+                <div class="gallery-item" data-category="banheiro">
+                    <img src="images/galeria6.jpg" alt="Acessórios Banheiro">
+                    <div class="gallery-overlay">
+                        <h3>Acessórios Banheiro</h3>
+                        <p>Organizadores e itens decorativos</p>
+                    </div>
+                </div>
+                
+                <!-- Imagem 7 -->
+                <div class="gallery-item" data-category="decoracao">
+                    <img src="images/galeria7.jpg" alt="Quadros Decorativos">
+                    <div class="gallery-overlay">
+                        <h3>Quadros Decorativos</h3>
+                        <p>Diversos modelos para todos os gostos</p>
+                    </div>
+                </div>
+                
+                <!-- Imagem 8 -->
+                <div class="gallery-item" data-category="loja">
+                    <img src="images/galeria8.jpg" alt="Atendimento">
+                    <div class="gallery-overlay">
+                        <h3>Atendimento</h3>
+                        <p>Nossa equipe pronta para ajudar</p>
+                    </div>
+                </div>
+                
+                <!-- Imagem 9 -->
+                <div class="gallery-item" data-category="cozinha">
+                    <img src="images/galeria9.jpg" alt="Eletroportáteis">
+                    <div class="gallery-overlay">
+                        <h3>Eletroportáteis</h3>
+                        <p>Variedade de pequenos eletrodomésticos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para visualização de imagens -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-col">
+                <h3>Tudo em Casa</h3>
+                <p>Sua loja de variedades com os melhores produtos para casa, presentes e utilidades domésticas.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Horário de Funcionamento</h3>
+                <p>Segunda a Sexta: 9h às 18h</p>
+                <p>Sábado: 9h às 13h</p>
+                <p>Domingo: Fechado</p>
+            </div>
+            <div class="footer-col">
+                <h3>Contato</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Rua Comercial, 123 - Centro</p>
+                <p><i class="fas fa-phone"></i> (41) 9999-9999</p>
+                <p><i class="fas fa-envelope"></i> contato@tudoemcasa.com</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Tudo em Casa. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
