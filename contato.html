@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Tudo em Casa</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Tudo em <span>Casa</span></h1>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li class="active"><a href="contato.html">Contato</a></li>
+                </ul>
+                <div class="mobile-menu-icon">
+                    <button onclick="menuShow()"><i class="fas fa-bars"></i></button>
+                </div>
+            </nav>
+            <div class="cart-icon">
+                <a href="#"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a>
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li class="active"><a href="contato.html">Contato</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Fale Conosco</h1>
+            <p>Tire suas dúvidas ou envie sugestões</p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Informações de Contato</h2>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Endereço:</strong> Rua Comercial, 123 - Centro, Curitiba/PR</p>
+                    <p><i class="fas fa-phone"></i> <strong>Telefone:</strong> (41) 9999-9999</p>
+                    <p><i class="fas fa-envelope"></i> <strong>E-mail:</strong> contato@tudoemcasa.com</p>
+                    <p><i class="fas fa-clock"></i> <strong>Horário de Funcionamento:</strong></p>
+                    <p>Segunda a Sexta: 9h às 18h</p>
+                    <p>Sábado: 9h às 13h</p>
+                    <p>Domingo: Fechado</p>
+                    
+                    <div class="social-links">
+                        <h3>Nos siga nas redes sociais</h3>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h2>Envie uma Mensagem</h2>
+                    <form id="contactForm" action="php/enviar.php" method="POST">
+                        <div class="form-group">
+                            <label for="nome">Nome:</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefone">Telefone:</label>
+                            <input type="tel" id="telefone" name="telefone">
+                        </div>
+                        <div class="form-group">
+                            <label for="assunto">Assunto:</label>
+                            <select id="assunto" name="assunto">
+                                <option value="duvida">Dúvida</option>
+                                <option value="sugestao">Sugestão</option>
+                                <option value="reclamacao">Reclamação</option>
+                                <option value="elogio">Elogio</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem:</label>
+                            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Enviar Mensagem</button>
+                    </form>
+                    <div id="form-message"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section">
+        <div class="container">
+            <h2>Onde Estamos</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.238539089441!2d-49.27438492433839!3d-25.45687797746526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce472f8f33c3d%3A0x5c6b0a3a8f0b1b1a!2sRua%20Comercial%2C%20123%20-%20Centro%2C%20Curitiba%20-%20PR%2C%2080000-000!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-col">
+                <h3>Tudo em Casa</h3>
+                <p>Sua loja de variedades com os melhores produtos para casa, presentes e utilidades domésticas.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Horário de Funcionamento</h3>
+                <p>Segunda a Sexta: 9h às 18h</p>
+                <p>Sábado: 9h às 13h</p>
+                <p>Domingo: Fechado</p>
+            </div>
+            <div class="footer-col">
+                <h3>Contato</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Rua Comercial, 123 - Centro</p>
+                <p><i class="fas fa-phone"></i> (41) 9999-9999</p>
+                <p><i class="fas fa-envelope"></i> contato@tudoemcasa.com</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Tudo em Casa. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
